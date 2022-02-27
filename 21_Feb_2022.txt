@@ -1,0 +1,223 @@
+Q.1) Modify the class to add a isTails method that returns true when the value is not heads.
+
+  public class Coin
+  {
+
+   // constant to represent heads
+   private static int HEADS = 1;
+   private static int TAILS = 0;
+
+   // current value of the coin
+   private int value = 0;
+
+   // method to randomly set the value of the coin to heads or tails
+   public void flip()
+   {
+      if (Math.random() < 0.5)
+      {
+          value = 0;
+      }
+      else
+      {
+         value = 1;
+      }
+   }
+
+   // return true if the value is heads or false otherwise
+   public boolean isHeads()
+   {
+      return value == HEADS;
+   }
+   public boolean isTails() { //Adding a Tails Method************//
+	   return value == TAILS;
+   }
+
+   // convert the value to a string
+   public String toString()
+   {
+      if (value == HEADS)
+    	  return "Heads";
+      else
+    	  return "Tails";
+   }
+
+   // test the class
+   public static void main(String[] args)
+   {
+
+      Coin myCoin = new Coin();
+      for (int i = 0; i < 10; i++)
+      {
+         myCoin.flip();
+         System.out.println(myCoin);
+         System.out.println(myCoin.isHeads());
+         System.out.println(myCoin.isTails());//
+      }
+   }
+}
+
+//*******************************************************************************************//
+
+2. Modify the code below to add more constructors. 
+   Also modify the main method to test the new constructors.
+
+class NewPerson{
+	  private String FullName;
+	   private int Id;
+	   private String Address;
+	   
+	   public NewPerson(String FullName) {
+		   this.FullName = FullName;
+		   
+	   }
+	   public String getFullName() { 
+		   return this.FullName;
+		   }
+	   public int getId() {
+		   return this.Id;
+		   }
+	   public String getAddress() { 
+		   return this.Address;
+		   }
+
+	   // methods - setters
+	   public void setFullName(String theName) {
+		   this.FullName = theName;
+		   }
+	   public void setId(int id) {
+		   this.Id = id;
+		   }
+	   public void setAddress(String Address) { 
+		   this.Address = Address;
+		   }
+}
+
+public class Person
+{
+   // fields
+   private String name;
+   private String email;
+   private String phoneNumber;
+
+   // constructor
+   public Person(String theName)
+   {
+      this.name = theName;
+   }
+   
+
+   // methods - getters
+   public String getName() { 
+	   return this.name;
+	   }
+   public String getEmail() {
+	   return this.email;
+	   }
+   public String getPhoneNumber() { 
+	   return this.phoneNumber;
+	   }
+
+   // methods - setters
+   public void setName(String theName) {
+	   this.name = theName;
+	   }
+   public void setEmail(String theEmail) {
+	   this.email = theEmail;
+	   }
+   public void setPhoneNumber(String thePhoneNumber) { 
+	   this.phoneNumber = thePhoneNumber;
+	   }
+   public String toString()
+   {
+      return this.name + " " + this.email + " " + this.phoneNumber;
+   }
+
+   // main method for testing
+   public static void main(String[] args)
+   {
+      Person p1 = new Person("Sana"); 
+      p1.setEmail("sana@gmail.com");
+      p1.setPhoneNumber("444202415");
+      System.out.println(p1);
+     // System.out.println(p1.toString());
+     
+      
+      Person p2 = new Person("Jean");
+      p2.setEmail("jean@gmail.com");
+      p2.setPhoneNumber("404 899-9955");
+      System.out.println(p2);
+      System.out.println(p2.toString());
+      
+      NewPerson n = new NewPerson("AJAY JADHAO");
+      System.out.println(n.getFullName());
+      n.setId(502);;
+      n.setAddress("Gandhi Chowk , SambhajiNagar ,Maharashtra");
+      System.out.println(n.getId());
+      System.out.println(n.getAddress());
+     
+     
+      
+   }
+}
+
+
+//*******************************************************************************************//
+
+3. package pack1;
+ 
+class A
+{
+    public A()
+    {
+        //public constructor
+    }
+}
+ 
+package pack2;
+ 
+import pack1.*;
+ 
+class B
+{
+    A a = new A();   	//Compile Time Error
+}
+
+
+Check if compile time error exists. If yes, correct the code to remove the error.
+
+
+Correction----->
+
+    package GMyPractice;
+
+    public class A {
+
+	public A() {
+		System.out.println("Hello , How are you ? ");
+	}
+
+}
+
+       package GeekAssignment;
+       import GMyPractice.*;
+
+       public class B {
+	public B()
+	{
+	     	
+	}
+
+	public static void main(String[] args) {
+		 A a = new A(); 
+
+	}
+
+}
+
+Output = Hello , How are you ? 
+
+
+
+//*******************************************************************************************//
+
+

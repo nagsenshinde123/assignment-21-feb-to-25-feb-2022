@@ -1,0 +1,102 @@
+Q.1)  Write a program to check for lower triangular matrix
+
+     public class CheckLowerTriangularMatrix {
+
+	public static void main(String[] args) {
+		int[][] inputTriangular = {
+				 {1,0,0}
+				,{4,5,0}
+				,{2,1,9}};
+		boolean IsLower = LowerTriangularMatrix(inputTriangular);
+		System.out.println(IsLower);
+		
+
+	}
+	private static boolean LowerTriangularMatrix(int[][] input)
+	{
+		int numRows = input.length;
+		int numCols = input[0].length;
+		
+		//Square Matrix
+		if(numRows != numCols)
+			return false;
+		
+		for(int i =0; i< numRows; i++)
+		{
+			for(int j=0; j< numCols; j++)
+			{
+				
+				if(i<j && input[i][j] !=0 )
+					return false;
+				
+				else if(i>= j && input[i][j] == 0)
+					return false; 
+				
+				
+			}
+		}
+		return true;
+	}
+}
+
+
+
+//*********************************************************************************//
+Q.2)  Find the sum of diagonal elements of a matrix
+
+     public class SumOfDiagonalElement {
+
+	public static void main(String[] args) {
+		int arr[][] = {
+				{1,0,0,4,0},
+				{0,2,4,0,0},
+				{0,8,4,4,0},
+				{0,2,0,2,0}};
+		int sum =0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				if(i==j) {
+					sum = sum + arr[i][j];
+				}
+			}
+		}
+		System.out.println("Sum of Diagonal Element is = " + sum);
+
+	}
+
+}
+
+
+//*********************************************************************************//
+Q.3)  Check whether the matrix is sparse."
+
+     public class SparseMatrix {
+
+	public static void main(String[] args) {
+		int arr[][] = {
+				{1,0,0,4,0},
+				{0,2,4,0,0},
+				{0,8,0,4,0},
+				{0,2,0,2,0}};
+		
+		int zero=0;
+		int nonZero=0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				if(arr[i][j] == 0) {
+					zero++;
+				}else {
+					nonZero++;
+				}
+			}
+		}
+		if(zero>nonZero) {
+			System.out.println("Is a Sparse Matrix !");
+		}else {
+			System.out.println("Not a Sparse Matrix !");
+		}
+
+	}
+
+}
+//*********************************************************************************//

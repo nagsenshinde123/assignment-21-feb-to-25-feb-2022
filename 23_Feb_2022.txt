@@ -1,0 +1,126 @@
+Q.1) create class Animal with various variables and methods in it to demonstrate 
+
+    public class Animal1 {
+	String cat ;
+	String dog ;
+	String tiger ;
+	public void catVoice() {
+		System.out.println(cat);
+	}
+    public void TigerVoice() {
+    	System.out.println(dog);
+	}
+    public void DogVoice() {
+    	System.out.println(tiger);
+	}
+
+	public static void main(String[] args) {
+		Animal1 a = new Animal1();
+		a.cat ="Meow Meow";
+		a.dog = "Bow Bow";
+		a.tiger = "Roaring";
+		
+		a.catVoice();
+		a.DogVoice();
+		a.TigerVoice();
+
+	}
+
+}
+
+
+//********************************************************************************************************//
+Q.2) create multiples objects like dog, cat, cow, elephant etc and demomnstrate various approches to assign 
+values to variables
+
+     class Dog{
+	public void DogProperties() {
+		System.out.println("Dog is barking");
+		System.out.println("Dog is eating");
+		System.out.println("Dog is bite ");
+	}
+}
+class cat{
+	public void CatProperties() {
+		System.out.println("Meow Meow");
+		System.out.println("Cat drink milk");
+	}
+}
+class Cow{
+	public void CowProperties() {
+		System.out.println("Cow give Milk ");
+	}
+}
+class Elephant{
+	public void elephantProperties() {
+		System.out.println("Elephant is black colour");
+		
+	}
+}
+public class MultiObj {
+
+	public static void main(String[] args) {
+		Dog d = new Dog();
+		d.DogProperties();
+		cat c = new cat();
+		c.CatProperties();
+		Cow cow = new Cow();
+		cow.CowProperties();
+		Elephant e = new Elephant();
+		e.elephantProperties();
+
+	}
+
+}
+
+
+//********************************************************************************************************//
+Q.3) demonstrate constructor chanining and create objects by passing no values, lesser value and more values
+
+     class Empty{
+	public Empty() {
+		System.out.println("Default Constructer");
+	}
+	public Empty(int x) {
+		System.out.println(x);
+	}
+	public Empty(int x , String str) {
+		System.out.println(x+" "+str);
+	}
+	
+}
+
+public class Chaining_Constructer {
+
+	public static void main(String[] args) {
+		Empty e = new Empty();
+		Empty e1 = new Empty(5);
+		Empty e2 = new Empty(10,"Ajay");
+		
+
+	}
+
+}
+
+
+//********************************************************************************************************//
+Q.1) create static variable age and create a static method inside class named incrementAge()
+     and inside increment the age whenever this method called .
+
+      public class AgeIncreMethod {
+	static int age;
+	public int IncrementAge(int age) {
+		age++;
+		return age++;
+	}
+
+	public static void main(String[] args) {
+		AgeIncreMethod a = new AgeIncreMethod();
+		System.out.println(a.IncrementAge(18));
+
+	}
+
+}
+
+
+//********************************************************************************************************//

@@ -1,0 +1,80 @@
+Q.1) Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. 
+    Assign the value of roll_no as '2' and that of name as "John" by creating an object of the class Student. 
+
+
+    public class Student {
+	String name = "John";
+	int roll_No = 2;
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		System.out.println("Student name : "+s.name);
+		System.out.println("Student roll number : "+s.roll_No);
+
+	}
+
+}
+
+//************************************************************************************************************************//
+Q.2) Assign and print the roll number, phone number and address of two students having names "Sam" and "John" respectively
+    by creating two objects of class 'Student'. 
+
+    public class Student {
+	String name  ;
+	int roll_No ;
+	long mobileNo ;
+	String address ;
+	
+	public void Studentdetail(String name, int roll_No, long mobileNo, String address) {
+		System.out.println(name+" "+roll_No+" "+mobileNo+" "+address);
+		
+	}
+
+	public static void main(String[] args) {
+		Student s1 = new Student();
+		Student s2 = new Student();
+		s1.Studentdetail("John", 302, 6548772211l, "Tokyo,Japan");
+		s2.Studentdetail("Sam", 202, 6544228877l, "Manchester,England");
+	
+	}
+
+
+}
+
+
+//************************************************************************************************************************//
+Q.3) Create a class 'Employee' with String variable 'name' and integer variable 'employee id'. 
+    Create 4 Employee objects and store in array and display.
+
+
+    public class Employee {
+	String name;
+	int EmployeeId;
+	
+	
+	public Employee(String n, int Id) {
+		name = n;
+		EmployeeId = Id;
+	}
+	public void printDetail() {
+		System.out.println("Employee Name : "+name+"\n"+"Employee Id : "+EmployeeId);
+	}
+
+	public static void main(String[] args) {
+		Employee [] emp1 = new Employee[4];
+		emp1[0] = new Employee("Ajay jadhao", 1122);
+		emp1[1] = new Employee("Akash Patil", 1123);
+		emp1[2] = new Employee("Sooraj Thakur", 1124);
+		emp1[3] = new Employee("Sagar patil", 1125);
+		
+		emp1[0].printDetail();
+		emp1[1].printDetail();
+		emp1[2].printDetail();
+		emp1[3].printDetail();
+		
+	
+	}
+
+}
+
+//************************************************************************************************************************//

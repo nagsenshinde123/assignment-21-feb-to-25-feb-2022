@@ -1,0 +1,16 @@
+
+Q.1) Driving electric car
+
+Q.2) public and protected both can be used.
+
+Q.3) Base
+     Derived
+     DeriDerived
+
+Q.4) c) Removing Stmt-2 will make the program compilable and it will print the following: Base Derived.
+
+Q.5) 13245
+
+Q.6) A) 2
+Q.7) d) int
+
